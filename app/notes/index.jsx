@@ -70,7 +70,9 @@ export default function NoteScreen() {
         data={notes}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
-          return <NoteItem note={item} deleteNote={deleteNote} />;
+          return (
+            <NoteItem note={item} deleteNote={deleteNote} setNotes={setNotes} />
+          );
         }}
       />
       <TouchableOpacity
